@@ -1,16 +1,23 @@
-## Hi there 👋
+# 👋 Hey, I'm [Your Name]
 
-<!--
-**kareemalnajjar99/kareemalnajjar99** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+iOS Software Engineer.
 
-Here are some ideas to get you started:
+I enjoy building things that start as a random idea, survive several questionable decisions, and somehow end up becoming real products.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Most of my time is spent exploring new ideas, solving interesting problems, and chasing that moment when a complex system finally clicks into place.
+
+Outside of work, you'll usually find me experimenting with side projects, diving into new technologies, or obsessing over details nobody will ever notice—but everyone will feel.
+
+---
+
+### Things I Believe
+
+* Great products feel effortless.
+* Simplicity is harder than complexity.
+* Curiosity beats expertise.
+* The best way to learn is to build.
+* Shipping beats perfection.
+
+---
+
+> Building today what I wanted to exist yesterday.
