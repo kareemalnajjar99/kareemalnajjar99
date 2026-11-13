@@ -1,0 +1,26 @@
+{
+  "firstName": "Kareem",
+  "lastName": "Alnajjar",
+  "eyebrow": "iOS ENGINEER · 6 YEARS",
+  "tagline": "I ship iOS apps, plus the backend and web around them.",
+  "years": 6,
+  "chips": [
+    "Swift",
+    "SwiftUI",
+    "UIKit",
+    "Kotlin",
+    "Flutter",
+    "Backend",
+    "Web"
+  ],
+  "projects": [
+    {
+      "key": "lumen",
+      "title": "Lumen",
+      "kicker": "SWIFT PACKAGE · METAL · SWIFTUI",
+      "desc": "Metal-powered effects for SwiftUI. Holographic cards, liquid transitions, touch ripples. One modifier each.",
+      "status": "BUILDING",
+      "wide": true
+    }
+  ]
+}

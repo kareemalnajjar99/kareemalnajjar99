@@ -1,29 +1,17 @@
-👋 Hey, I'm Kareem Alnajjar
-iOS Software Engineer | Passionate about building effortless, simple, and impactful products.
+<a href="https://www.kareemalnajjar.com"><img src="assets/hero.svg" width="100%" alt="Kareem Alnajjar. iOS engineer, 6 years. I ship iOS apps, plus the backend and web around them."></a>
 
-I enjoy turning random ideas into real products, navigating through questionable decisions, and celebrating when complex systems finally click into place.
+I've been building iOS apps for six years. Swift and SwiftUI are home, but I don't stay in my lane: when a feature needs an endpoint, a dashboard or an Android build, I'd rather write it than wait for it.
 
-Most of my time is spent exploring new ideas, solving interesting problems, and chasing that moment of clarity when everything comes together.
+I like products that feel effortless, and I've learned that getting there is mostly unglamorous work: cutting features, fixing the animation nobody asked about, and shipping before it feels ready.
 
-Outside of work, you'll find me experimenting with side projects, diving into new technologies, or obsessing over details that make a big difference.
+#### What I'm building
 
-### 🛠️ Technical Skills
-- iOS Development
-- Swift & SwiftUI
-- UI/UX Design
-- System Architecture
-- Problem-Solving
+<p align="center">
+  <img src="assets/lumen-holographic.webp" width="440" alt="A card with a holographic foil that shifts as it is dragged and tilted">
+</p>
 
-### 💡 Things I Believe
-- Great products feel effortless.
-- Simplicity is harder than complexity.
-- Curiosity beats expertise.
-- The best way to learn is to build.
-- Shipping beats perfection.
+**Lumen** is a Swift package of Metal shader effects for SwiftUI, each one a single modifier. The first is this holographic foil that follows your finger. More effects are on the way, and it goes open source soon.
 
-### 📬 Let's Connect!
-- [LinkedIn](https://www.linkedin.com/in/kareemalnajjar)
-- [Twitter](https://twitter.com/kareemalnajjar)
-- [Personal Website](https://www.kareemalnajjar.com)
+#### Find me
 
-Feel free to explore my projects and reach out if you'd like to collaborate or just chat about technology!
+[LinkedIn](https://www.linkedin.com/in/kareemalnajjar) · [Twitter](https://twitter.com/kareemalnajjar) · [kareemalnajjar.com](https://www.kareemalnajjar.com)
