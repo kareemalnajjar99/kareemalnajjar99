@@ -7,12 +7,14 @@ I like products that feel effortless, and I've learned that getting there is mos
 #### What I'm building
 
 <p align="center">
-  <img src="assets/lumen-holographic.webp" width="32%" alt="A card with a holographic foil that shifts as it is dragged and tilted">
-  <img src="assets/lumen-ripple.webp" width="32%" alt="A card that ripples outward from each tap">
-  <img src="assets/lumen-liquid.webp" width="32%" alt="A card that drains away and pours back in behind a wavy liquid surface">
+  <a href="https://github.com/kareemalnajjar99/Lumen">
+    <img src="assets/lumen-holographic.webp" width="32%" alt="A card with a holographic foil that shifts as it is dragged and tilted">
+    <img src="assets/lumen-ripple.webp" width="32%" alt="A card that ripples outward from each tap">
+    <img src="assets/lumen-liquid.webp" width="32%" alt="A card that drains away and pours back in behind a wavy liquid surface">
+  </a>
 </p>
 
-**Lumen** is a Swift package of Metal shader effects for SwiftUI, each one a single line to add: a holographic foil that follows your finger, ripples that spread from every tap, and a transition that pours a view in like liquid. It goes open source soon.
+**[Lumen](https://github.com/kareemalnajjar99/Lumen)** is a Swift package of Metal shader effects for SwiftUI, each one a single line to add: a holographic foil that follows your finger and the tilt of your phone, ripples that spread from every tap, and a transition that pours a view in like liquid. Version 1.0 is out and open source.
 
 #### Find me
 
