@@ -16,4 +16,4 @@ I like products that feel effortless, and I've learned that getting there is mos
 
 #### Find me
 
-[LinkedIn](https://www.linkedin.com/in/kareemalnajjar) · [Twitter](https://twitter.com/kareemalnajjar) · [kareemalnajjar.com](https://www.kareemalnajjar.com)
+[LinkedIn](https://www.linkedin.com/in/kareemalnajjar) · [kareemalnajjar.com](https://www.kareemalnajjar.com)
