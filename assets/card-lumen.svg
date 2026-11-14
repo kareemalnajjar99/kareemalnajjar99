@@ -24,6 +24,7 @@
 .foil{animation:foil 7s linear infinite}
 @keyframes shine{0%,35%{transform:translateX(0)}75%,100%{transform:translateX(560px)}}
 .shine{animation:shine 4.5s ease-in-out infinite}
+
 </style>
 <g clip-path="url(#frame)">
  <rect width="1280" height="300" fill="#08090D"/>
@@ -50,9 +51,9 @@
  <rect x=".75" y=".75" width="298.5" height="182.5" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
 </g>
  <g transform="translate(40 40) scale(1.3076923076923077)"><g><rect width="52" height="52" rx="13" fill="url(#ic-lumen)"/><rect width="52" height="52" rx="13" fill="url(#gloss)"/><rect x=".5" y=".5" width="51" height="51" rx="12.5" fill="none" stroke="#fff" stroke-opacity=".2"/><path d="M26 8.5C27.6 19.4 32.6 24.4 43.5 26 32.6 27.6 27.6 32.6 26 43.5 24.4 32.6 19.4 27.6 8.5 26 19.4 24.4 24.4 19.4 26 8.5Z" fill="#fff"/><circle cx="40.5" cy="12" r="2.6" fill="#fff" fill-opacity=".85"/></g></g>
- <rect x="124" y="60" width="117" height="28" rx="14" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".16"/>
- <circle class="pulse" cx="139" cy="74" r="4" fill="#30D158"/>
- <text x="151" y="78.5" class="mono" font-size="12" font-weight="600" letter-spacing="1.8" fill="#DDE1EA">BUILDING</text>
+ <rect x="124" y="60" width="146" height="28" rx="14" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".16"/>
+ <circle cx="139" cy="74" r="4" fill="#8E96A8"/>
+ <text x="151" y="78.5" class="mono" font-size="12" font-weight="600" letter-spacing="1.8" fill="#DDE1EA">VERSION 1.0</text>
  <text x="38" y="172" class="sans" font-size="46" font-weight="800" letter-spacing="-1" fill="#fff">Lumen</text>
  <text x="40" y="201" class="mono" font-size="13.5" font-weight="600" letter-spacing="1.9" fill="#B26BFF">SWIFT PACKAGE · METAL · SWIFTUI</text>
  <text x="40" y="237" class="sans" font-size="19.5" font-weight="500" fill="#AEB5C4">Metal-powered effects for SwiftUI. Holographic cards, liquid</text>

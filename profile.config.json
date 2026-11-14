@@ -15,11 +15,19 @@
   ],
   "projects": [
     {
+      "key": "shipyard",
+      "title": "Shipyard",
+      "kicker": "SWIFTUI · LIVE ACTIVITIES · SPRING BOOT",
+      "desc": "Your GitHub Actions runs on the Dynamic Island and Lock Screen. Nothing to add to your workflows.",
+      "status": "BUILDING",
+      "wide": true
+    },
+    {
       "key": "lumen",
       "title": "Lumen",
       "kicker": "SWIFT PACKAGE · METAL · SWIFTUI",
       "desc": "Metal-powered effects for SwiftUI. Holographic cards, liquid transitions, touch ripples. One modifier each.",
-      "status": "BUILDING",
+      "status": "VERSION 1.0",
       "wide": true
     }
   ]

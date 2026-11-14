@@ -30,8 +30,16 @@ const ICONS = {
     glyph: `<path d="M26 8.5C27.6 19.4 32.6 24.4 43.5 26 32.6 27.6 27.6 32.6 26 43.5 24.4 32.6 19.4 27.6 8.5 26 19.4 24.4 24.4 19.4 26 8.5Z" fill="#fff"/><circle cx="40.5" cy="12" r="2.6" fill="#fff" fill-opacity=".85"/>`,
   },
   shipyard: {
-    g: ['#FFA24A', '#FF3B2F'],
-    glyph: `<rect x="8" y="18.5" width="36" height="15" rx="7.5" fill="#0A0B0F"/><rect x="13.5" y="24.4" width="13" height="3.2" rx="1.6" fill="#fff" fill-opacity=".92"/><circle cx="36" cy="26" r="3.3" fill="#30D158"/>`,
+    g: ['#1B2440', '#080A11'],
+    glow: ['#FFA24A', '#FF5A3C'],
+    glyph:
+      `<defs><linearGradient id="ic-sail" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB24D"/><stop offset="1" stop-color="#FF5A3C"/></linearGradient></defs>` +
+      `<g transform="translate(8 9.9) scale(.0542) translate(-180 -216)">` +
+      `<path d="M512 250V552H776Z" fill="url(#ic-sail)" stroke="url(#ic-sail)" stroke-width="36" stroke-linejoin="round"/>` +
+      `<path d="M452 352V552H292Z" fill="#fff" stroke="#fff" stroke-width="36" stroke-linejoin="round"/>` +
+      `<rect x="196" y="622" width="632" height="172" rx="86" fill="#fff"/>` +
+      `<rect x="270" y="690" width="196" height="36" rx="18" fill="#0B0E18"/>` +
+      `<circle cx="724" cy="708" r="52" fill="#0B0E18"/><circle cx="724" cy="708" r="38" fill="#30D158"/></g>`,
   },
   polyglot: {
     g: ['#2DD4BF', '#2563EB'],
@@ -307,17 +315,91 @@ function holoCard() {
 </g>`;
 }
 
+function islandArt() {
+  // A Live Activity following a run: four jobs fill in turn, then the run passes. One loop is 12 seconds.
+  const jobs = ['Lint', 'Test', 'Build', 'Deploy'];
+  const ends = [20, 40, 60, 78];
+  const window = (from, to) => `0%,${from}%{opacity:0}${from + 1.5}%,${to}%{opacity:1}${to + 1.5}%,100%{opacity:0}`;
+
+  const css = jobs
+    .map((_, i) => {
+      const from = i === 0 ? 0 : ends[i - 1];
+      return (
+        `@keyframes fill${i}{0%,${from}%{transform:scaleX(0)}${ends[i]}%,100%{transform:scaleX(1)}}` +
+        `@keyframes pass${i}{0%,${ends[i]}%{opacity:0}${ends[i] + 1.5}%,100%{opacity:1}}` +
+        `@keyframes job${i}{${i === 0 ? `0%,${ends[i]}%{opacity:1}${ends[i] + 1.5}%,100%{opacity:0}` : window(from, ends[i])}}` +
+        `.fill${i}{transform-box:fill-box;transform-origin:left center;animation:fill${i} 12s linear infinite}` +
+        `.pass${i}{animation:pass${i} 12s linear infinite}.job${i}{animation:job${i} 12s linear infinite}`
+      );
+    })
+    .join('');
+
+  const segments = jobs
+    .map((_, i) => {
+      const x = 28 + i * 83;
+      return (
+        `<rect x="${x}" y="104" width="75" height="7" rx="3.5" fill="#fff" fill-opacity=".14"/>` +
+        `<rect class="fill${i}" x="${x}" y="104" width="75" height="7" rx="3.5" fill="#FF9F0A"/>` +
+        `<rect class="pass${i}" x="${x}" y="104" width="75" height="7" rx="3.5" fill="#30D158"/>`
+      );
+    })
+    .join('');
+
+  const labels = jobs
+    .map(
+      (job, i) =>
+        `<text class="sans job${i}" x="86" y="72" font-size="15" font-weight="500" fill="${MUTED}">${job} · job ${i + 1} of ${jobs.length}</text>`,
+    )
+    .join('');
+
+  return {
+    css:
+      css +
+      `@keyframes running{0%,78%{opacity:1}79.5%,100%{opacity:0}}@keyframes passed{0%,78%{opacity:0}79.5%,100%{opacity:1}}` +
+      `.running{animation:running 12s linear infinite}.passed{animation:passed 12s linear infinite}` +
+      `@keyframes spin{to{transform:rotate(360deg)}}.spin{transform-box:fill-box;transform-origin:center;animation:spin 1s linear infinite}`,
+    svg: `
+<g transform="translate(1000 150) rotate(6) scale(1.16) translate(-192 -70)">
+ <rect width="384" height="140" rx="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".14"/>
+</g>
+<g transform="translate(978 152) rotate(-5) scale(1.16) translate(-192 -70)">
+ <rect width="384" height="140" rx="44" fill="#000"/>
+ <rect x=".75" y=".75" width="382.5" height="138.5" rx="43.25" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="1.5"/>
+ ${icon('shipyard', 28, 26, 46)}
+ <text class="sans" x="86" y="48" font-size="19" font-weight="700" fill="#fff">Lumen <tspan class="mono" font-size="13" font-weight="500" fill="#fff" fill-opacity=".5" dx="4">main</tspan></text>
+ ${labels}
+ <text class="sans passed" x="86" y="72" font-size="15" font-weight="600" fill="#30D158">Passed in 1m 12s</text>
+ <g class="running">
+  <circle cx="338" cy="50" r="13" fill="none" stroke="#FF9F0A" stroke-opacity=".25" stroke-width="4"/>
+  <circle class="spin" cx="338" cy="50" r="13" fill="none" stroke="#FF9F0A" stroke-width="4" stroke-linecap="round" stroke-dasharray="22 60"/>
+ </g>
+ <g class="passed">
+  <circle cx="338" cy="50" r="15" fill="#30D158"/>
+  <path d="M331 50.5l5 5 9-10" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+ </g>
+ ${segments}
+</g>`,
+  };
+}
+
+/** The illustration on the right of a wide card, for the projects that have one. */
+const ART = {
+  lumen: () => ({ svg: holoCard(), css: '' }),
+  shipyard: islandArt,
+};
+
 function card(p) {
   const wide = !!p.wide;
   const W = wide ? 1280 : 632;
   const H = wide ? 300 : 232;
   const pad = wide ? 40 : 32;
   const iconSize = wide ? 68 : 60;
-  const [c1, c2] = ICONS[p.key].g;
+  const [c1, c2] = ICONS[p.key].glow ?? ICONS[p.key].g;
+  const art = wide && ART[p.key] ? ART[p.key]() : { svg: '', css: '' };
   const statusW = Math.round(p.status.length * 9.6 + 40);
   const statusX = pad + iconSize + 16;
   const statusY = pad + iconSize / 2 - 14;
-  const live = p.status === 'BUILDING';
+  const live = p.status.startsWith('BUILDING');
   const lines = wide ? wrap(p.desc, 62) : [p.desc];
   const t = wide
     ? { title: 172, titleSize: 46, kicker: 201, kickerSize: 13.5, desc: 237, descSize: 19.5, lead: 27 }
@@ -344,12 +426,13 @@ function card(p) {
 .foil{animation:foil 7s linear infinite}
 @keyframes shine{0%,35%{transform:translateX(0)}75%,100%{transform:translateX(560px)}}
 .shine{animation:shine 4.5s ease-in-out infinite}
+${art.css}
 </style>
 <g clip-path="url(#frame)">
  <rect width="${W}" height="${H}" fill="${INK}"/>
  <circle cx="${W - 20}" cy="-20" r="${wide ? 560 : 360}" fill="url(#glowA)"/>
  <circle cx="0" cy="${H + 40}" r="${wide ? 420 : 300}" fill="url(#glowB)"/>
- ${wide ? holoCard() : ''}
+ ${art.svg}
  ${icon(p.key, pad, pad, iconSize)}
  <rect x="${statusX}" y="${statusY}" width="${statusW}" height="28" rx="14" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".16"/>
  <circle${live ? ' class="pulse"' : ''} cx="${statusX + 15}" cy="${statusY + 14}" r="4" fill="${live ? '#30D158' : '#8E96A8'}"/>

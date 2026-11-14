@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" width="1280" height="300" role="img" aria-label="Shipyard: Your GitHub Actions runs on the Dynamic Island and Lock Screen. Nothing to add to your workflows.">
+<title>Shipyard</title>
+<defs>
+ <clipPath id="frame"><rect width="1280" height="300" rx="24"/></clipPath>
+ <radialGradient id="glowA"><stop offset="0" stop-color="#FFA24A" stop-opacity=".42"/><stop offset="1" stop-color="#FFA24A" stop-opacity="0"/></radialGradient>
+ <radialGradient id="glowB"><stop offset="0" stop-color="#FF5A3C" stop-opacity=".2"/><stop offset="1" stop-color="#FF5A3C" stop-opacity="0"/></radialGradient>
+ <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="ic-shipyard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B2440"/><stop offset="1" stop-color="#080A11"/></linearGradient>
+ <clipPath id="holoClip"><rect width="300" height="184" rx="22"/></clipPath>
+ <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="0" spreadMethod="repeat"><stop offset="0" stop-color="#FF5F6D"/><stop offset=".2" stop-color="#FFC371"/><stop offset=".4" stop-color="#47E5BC"/><stop offset=".6" stop-color="#5B8CFF"/><stop offset=".8" stop-color="#B26BFF"/><stop offset="1" stop-color="#FF5F6D"/></linearGradient>
+ <linearGradient id="holoShade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A0B0F" stop-opacity=".5"/><stop offset=".6" stop-color="#0A0B0F" stop-opacity=".12"/><stop offset="1" stop-color="#0A0B0F" stop-opacity=".4"/></linearGradient>
+ <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="1.2" height="7" fill="#fff" fill-opacity=".13"/></pattern>
+</defs>
+<style>
+.sans{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,'SF Mono',SFMono-Regular,Menlo,'JetBrains Mono',Consolas,monospace}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{0%{opacity:0;transform:scale(.4)}70%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .55s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.pulse{animation:pulse 2.2s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@keyframes foil{from{transform:translateX(0)}to{transform:translateX(300px)}}
+.foil{animation:foil 7s linear infinite}
+@keyframes shine{0%,35%{transform:translateX(0)}75%,100%{transform:translateX(560px)}}
+.shine{animation:shine 4.5s ease-in-out infinite}
+@keyframes fill0{0%,0%{transform:scaleX(0)}20%,100%{transform:scaleX(1)}}@keyframes pass0{0%,20%{opacity:0}21.5%,100%{opacity:1}}@keyframes job0{0%,20%{opacity:1}21.5%,100%{opacity:0}}.fill0{transform-box:fill-box;transform-origin:left center;animation:fill0 12s linear infinite}.pass0{animation:pass0 12s linear infinite}.job0{animation:job0 12s linear infinite}@keyframes fill1{0%,20%{transform:scaleX(0)}40%,100%{transform:scaleX(1)}}@keyframes pass1{0%,40%{opacity:0}41.5%,100%{opacity:1}}@keyframes job1{0%,20%{opacity:0}21.5%,40%{opacity:1}41.5%,100%{opacity:0}}.fill1{transform-box:fill-box;transform-origin:left center;animation:fill1 12s linear infinite}.pass1{animation:pass1 12s linear infinite}.job1{animation:job1 12s linear infinite}@keyframes fill2{0%,40%{transform:scaleX(0)}60%,100%{transform:scaleX(1)}}@keyframes pass2{0%,60%{opacity:0}61.5%,100%{opacity:1}}@keyframes job2{0%,40%{opacity:0}41.5%,60%{opacity:1}61.5%,100%{opacity:0}}.fill2{transform-box:fill-box;transform-origin:left center;animation:fill2 12s linear infinite}.pass2{animation:pass2 12s linear infinite}.job2{animation:job2 12s linear infinite}@keyframes fill3{0%,60%{transform:scaleX(0)}78%,100%{transform:scaleX(1)}}@keyframes pass3{0%,78%{opacity:0}79.5%,100%{opacity:1}}@keyframes job3{0%,60%{opacity:0}61.5%,78%{opacity:1}79.5%,100%{opacity:0}}.fill3{transform-box:fill-box;transform-origin:left center;animation:fill3 12s linear infinite}.pass3{animation:pass3 12s linear infinite}.job3{animation:job3 12s linear infinite}@keyframes running{0%,78%{opacity:1}79.5%,100%{opacity:0}}@keyframes passed{0%,78%{opacity:0}79.5%,100%{opacity:1}}.running{animation:running 12s linear infinite}.passed{animation:passed 12s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.spin{transform-box:fill-box;transform-origin:center;animation:spin 1s linear infinite}
+</style>
+<g clip-path="url(#frame)">
+ <rect width="1280" height="300" fill="#08090D"/>
+ <circle cx="1260" cy="-20" r="560" fill="url(#glowA)"/>
+ <circle cx="0" cy="340" r="420" fill="url(#glowB)"/>
+ 
+<g transform="translate(1000 150) rotate(6) scale(1.16) translate(-192 -70)">
+ <rect width="384" height="140" rx="44" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".14"/>
+</g>
+<g transform="translate(978 152) rotate(-5) scale(1.16) translate(-192 -70)">
+ <rect width="384" height="140" rx="44" fill="#000"/>
+ <rect x=".75" y=".75" width="382.5" height="138.5" rx="43.25" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="1.5"/>
+ <g transform="translate(28 26) scale(0.8846153846153846)"><g><rect width="52" height="52" rx="13" fill="url(#ic-shipyard)"/><rect width="52" height="52" rx="13" fill="url(#gloss)"/><rect x=".5" y=".5" width="51" height="51" rx="12.5" fill="none" stroke="#fff" stroke-opacity=".2"/><defs><linearGradient id="ic-sail" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB24D"/><stop offset="1" stop-color="#FF5A3C"/></linearGradient></defs><g transform="translate(8 9.9) scale(.0542) translate(-180 -216)"><path d="M512 250V552H776Z" fill="url(#ic-sail)" stroke="url(#ic-sail)" stroke-width="36" stroke-linejoin="round"/><path d="M452 352V552H292Z" fill="#fff" stroke="#fff" stroke-width="36" stroke-linejoin="round"/><rect x="196" y="622" width="632" height="172" rx="86" fill="#fff"/><rect x="270" y="690" width="196" height="36" rx="18" fill="#0B0E18"/><circle cx="724" cy="708" r="52" fill="#0B0E18"/><circle cx="724" cy="708" r="38" fill="#30D158"/></g></g></g>
+ <text class="sans" x="86" y="48" font-size="19" font-weight="700" fill="#fff">Lumen <tspan class="mono" font-size="13" font-weight="500" fill="#fff" fill-opacity=".5" dx="4">main</tspan></text>
+ <text class="sans job0" x="86" y="72" font-size="15" font-weight="500" fill="#AEB5C4">Lint · job 1 of 4</text><text class="sans job1" x="86" y="72" font-size="15" font-weight="500" fill="#AEB5C4">Test · job 2 of 4</text><text class="sans job2" x="86" y="72" font-size="15" font-weight="500" fill="#AEB5C4">Build · job 3 of 4</text><text class="sans job3" x="86" y="72" font-size="15" font-weight="500" fill="#AEB5C4">Deploy · job 4 of 4</text>
+ <text class="sans passed" x="86" y="72" font-size="15" font-weight="600" fill="#30D158">Passed in 1m 12s</text>
+ <g class="running">
+  <circle cx="338" cy="50" r="13" fill="none" stroke="#FF9F0A" stroke-opacity=".25" stroke-width="4"/>
+  <circle class="spin" cx="338" cy="50" r="13" fill="none" stroke="#FF9F0A" stroke-width="4" stroke-linecap="round" stroke-dasharray="22 60"/>
+ </g>
+ <g class="passed">
+  <circle cx="338" cy="50" r="15" fill="#30D158"/>
+  <path d="M331 50.5l5 5 9-10" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+ </g>
+ <rect x="28" y="104" width="75" height="7" rx="3.5" fill="#fff" fill-opacity=".14"/><rect class="fill0" x="28" y="104" width="75" height="7" rx="3.5" fill="#FF9F0A"/><rect class="pass0" x="28" y="104" width="75" height="7" rx="3.5" fill="#30D158"/><rect x="111" y="104" width="75" height="7" rx="3.5" fill="#fff" fill-opacity=".14"/><rect class="fill1" x="111" y="104" width="75" height="7" rx="3.5" fill="#FF9F0A"/><rect class="pass1" x="111" y="104" width="75" height="7" rx="3.5" fill="#30D158"/><rect x="194" y="104" width="75" height="7" rx="3.5" fill="#fff" fill-opacity=".14"/><rect class="fill2" x="194" y="104" width="75" height="7" rx="3.5" fill="#FF9F0A"/><rect class="pass2" x="194" y="104" width="75" height="7" rx="3.5" fill="#30D158"/><rect x="277" y="104" width="75" height="7" rx="3.5" fill="#fff" fill-opacity=".14"/><rect class="fill3" x="277" y="104" width="75" height="7" rx="3.5" fill="#FF9F0A"/><rect class="pass3" x="277" y="104" width="75" height="7" rx="3.5" fill="#30D158"/>
+</g>
+ <g transform="translate(40 40) scale(1.3076923076923077)"><g><rect width="52" height="52" rx="13" fill="url(#ic-shipyard)"/><rect width="52" height="52" rx="13" fill="url(#gloss)"/><rect x=".5" y=".5" width="51" height="51" rx="12.5" fill="none" stroke="#fff" stroke-opacity=".2"/><defs><linearGradient id="ic-sail" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB24D"/><stop offset="1" stop-color="#FF5A3C"/></linearGradient></defs><g transform="translate(8 9.9) scale(.0542) translate(-180 -216)"><path d="M512 250V552H776Z" fill="url(#ic-sail)" stroke="url(#ic-sail)" stroke-width="36" stroke-linejoin="round"/><path d="M452 352V552H292Z" fill="#fff" stroke="#fff" stroke-width="36" stroke-linejoin="round"/><rect x="196" y="622" width="632" height="172" rx="86" fill="#fff"/><rect x="270" y="690" width="196" height="36" rx="18" fill="#0B0E18"/><circle cx="724" cy="708" r="52" fill="#0B0E18"/><circle cx="724" cy="708" r="38" fill="#30D158"/></g></g></g>
+ <rect x="124" y="60" width="117" height="28" rx="14" fill="#fff" fill-opacity=".07" stroke="#fff" stroke-opacity=".16"/>
+ <circle class="pulse" cx="139" cy="74" r="4" fill="#30D158"/>
+ <text x="151" y="78.5" class="mono" font-size="12" font-weight="600" letter-spacing="1.8" fill="#DDE1EA">BUILDING</text>
+ <text x="38" y="172" class="sans" font-size="46" font-weight="800" letter-spacing="-1" fill="#fff">Shipyard</text>
+ <text x="40" y="201" class="mono" font-size="13.5" font-weight="600" letter-spacing="1.9" fill="#FFA24A">SWIFTUI · LIVE ACTIVITIES · SPRING BOOT</text>
+ <text x="40" y="237" class="sans" font-size="19.5" font-weight="500" fill="#AEB5C4">Your GitHub Actions runs on the Dynamic Island and Lock</text>
+ <text x="40" y="264" class="sans" font-size="19.5" font-weight="500" fill="#AEB5C4">Screen. Nothing to add to your workflows.</text>
+ 
+</g>
+<rect x=".5" y=".5" width="1279" height="299" rx="23.5" fill="none" stroke="#fff" stroke-opacity=".12"/>
+</svg>
